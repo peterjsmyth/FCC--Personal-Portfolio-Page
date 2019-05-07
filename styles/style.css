@@ -13,6 +13,10 @@ font-family: 'Berkshire Swash', cursive;
   color: #C5C6C7;
 }
 
+html {
+  min-width: 380px;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "Montserrat", sans-serif;
 }
@@ -41,20 +45,22 @@ h5 {
   width: 100vw;
 }
 
+#welcome-section {
+  height: 100vh;
+}
+
 .font-special {
   font-family: "Berkshire Swash", cursive;
 }
 
-#brand h1 {
-  color: #66FCF1;
-  text-align: center;
-  padding: 10px 0;
-}
-
 #nav-menu {
+  position: absolute;
+  top: 0;
+  right: 0px;
   line-height: 20px;
-  width: 90px;
-  margin: 0 auto;
+  padding-top: 10px;
+  padding-right: 10px;
+  text-align: right;
   cursor: pointer;
 }
 #nav-menu i {
@@ -69,18 +75,18 @@ h5 {
   color: #45A29E;
 }
 
-#nav-links {
+#navbar {
   display: none;
   padding-top: 10px;
   flex-direction: column;
 }
-#nav-links a {
+#navbar a {
   text-decoration: none;
   text-align: center;
   padding: 5px;
   display: inline;
 }
-#nav-links a span:hover {
+#navbar a span:hover {
   color: #45A29E;
   border-bottom: 1px solid #45A29E;
   display: inline;
@@ -98,9 +104,25 @@ h5 {
   box-shadow: 0 0 50px #45A29E;
 }
 
+#header-tagline h1.welcome {
+  color: #45A29E;
+  padding-left: 5vw;
+  padding-bottom: 1vh;
+}
+#header-tagline h1.name {
+  color: #45A29E;
+  text-align: center;
+  padding-bottom: 1vh;
+}
+#header-tagline p {
+  text-align: right;
+  padding-right: 5vw;
+}
 #header-tagline p span.role {
-  font-family: "Montserrat", sans-serif !important;
-  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #66FCF1;
 }
 
 /*# sourceMappingURL=style.css.map */

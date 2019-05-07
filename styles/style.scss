@@ -14,6 +14,10 @@ font-family: 'Berkshire Swash', cursive;
   color: #C5C6C7;
 }
 
+html {
+  min-width: 380px;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
 }
@@ -28,24 +32,31 @@ h5 {font-size: 1.2rem;}
   width: 100vw;
 }
 
+#welcome-section {
+  height: 100vh;
+}
+
 .font-special {
   font-family: 'Berkshire Swash', cursive;
 }
 
-#brand h1 {
-  color: #66FCF1;
-  text-align: center;
-  padding: 10px 0;
-}
+// #brand h1 {
+//   color: #66FCF1;
+//   text-align: center;
+//   padding: 10px 0;
+// }
 
 #nav-menu {
+  position: absolute;
+  top: 0;
+  right: 0px;
   line-height: 20px;
-  width: 90px;
-  margin: 0 auto;
+  padding-top: 10px;
+  padding-right: 10px;
+  text-align: right;
   cursor: pointer;
   i {
     padding-right: 6px;
-
   }
   p {
     font-family: 'Lato', sans-serif;
@@ -59,7 +70,7 @@ h5 {font-size: 1.2rem;}
 
 }
 
-#nav-links {
+#navbar {
   display: none;
   padding-top: 10px;
   flex-direction: column;
@@ -91,8 +102,26 @@ h5 {font-size: 1.2rem;}
 }
 
 #header-tagline {
+  h1.welcome{
+      // font-size: 1.8rem;
+      color: #45A29E;
+      padding-left: 5vw;
+      padding-bottom: 1vh;
+  }
+  h1.name{
+      // font-size: 1.8rem;
+      color: #45A29E;
+      text-align: center;
+      padding-bottom: 1vh;
+  }
+  p {
+    text-align: right;
+    padding-right: 5vw;
+  }
   p span.role {
-    font-family: 'Montserrat', sans-serif !important;
-    font-size: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #66FCF1;
   }
 }
