@@ -11,10 +11,11 @@ font-family: 'Berkshire Swash', cursive;
   background-color: #0B0C10;
   font-family: "Lato", sans-serif;
   color: #C5C6C7;
+  box-sizing: border-box;
 }
 
 html {
-  min-width: 380px;
+  min-width: calc(100vw - 17px);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -42,7 +43,7 @@ h5 {
 }
 
 #container-page {
-  width: 100vw;
+  min-width: 380px;
 }
 
 #welcome-section {
@@ -92,37 +93,125 @@ h5 {
   display: inline;
 }
 
-#header-pic {
-  margin: 40px 0;
+#header-content {
+  height: calc(100% - 20px);
 }
-#header-pic img {
+#header-content #header-pic {
+  margin: auto 0;
+  padding: 20px 0;
+}
+#header-content #header-pic img {
   display: block;
-  width: 75%;
+  width: 55%;
   border-radius: 50%;
-  border: 6px solid #1F2833;
+  border: 1px solid #45A29E;
   margin: 0 auto;
-  box-shadow: 0 0 50px #45A29E;
+  box-shadow: 0 0 30px #45A29E;
 }
 
-#header-tagline h1.welcome {
+#header-tagline {
+  background-color: rgba(0, 0, 0, 0);
+}
+#header-tagline .header-tagline-text {
+  background-color: rgba(0, 0, 0, 0);
+}
+#header-tagline .header-tagline-text h1.welcome {
+  background-color: rgba(0, 0, 0, 0);
   color: #45A29E;
-  padding-left: 5vw;
+  padding-left: 2vw;
   padding-bottom: 1vh;
 }
-#header-tagline h1.name {
+#header-tagline .header-tagline-text p.welcome-text {
+  padding-bottom: 1vh;
+  padding-left: 12.5vw;
+}
+#header-tagline .header-tagline-text h1.name {
   color: #45A29E;
   text-align: center;
-  padding-bottom: 1vh;
 }
-#header-tagline p {
+#header-tagline .header-tagline-text p.what-am-i {
   text-align: right;
-  padding-right: 5vw;
+  padding-right: 12.5vw;
+  padding-top: 1vh;
 }
-#header-tagline p span.role {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.8rem;
-  font-weight: 800;
+#header-tagline .header-tagline-text h1.role {
   color: #66FCF1;
+  padding-right: 1vw;
+  padding-top: 2vh;
+  text-align: right;
+}
+
+#portfolio-area {
+  height: 100vh;
+  display: flex;
+}
+#portfolio-area .port-images {
+  border: 1px red solid;
+  width: 480px;
+}
+
+@media screen and (min-width: 600px) {
+  #container-page {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  #nav-menu {
+    display: none;
+  }
+
+  #navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  #navbar a .menu-item {
+    font-size: 16px;
+  }
+
+  #welcome-section {
+    height: calc(100vh - 44px);
+    border: 1px red solid;
+  }
+
+  #header-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  #header-content #header-pic img {
+    width: 75%;
+  }
+
+  #header-tagline {
+    padding: 0 1vw;
+    position: relative;
+  }
+  #header-tagline .header-tagline-text {
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  #header-tagline .header-tagline-text h1.welcome {
+    padding-left: 0;
+    padding-bottom: 1vh;
+  }
+  #header-tagline .header-tagline-text p.welcome-text {
+    padding-left: 7.5vw;
+    padding-bottom: 1vh;
+  }
+  #header-tagline .header-tagline-text h1.name {
+    padding-bottom: 0;
+  }
+  #header-tagline .header-tagline-text p.what-am-i {
+    padding-right: 7.5vw;
+    text-align: right;
+    padding-top: 1vh;
+  }
+  #header-tagline .header-tagline-text h1.role {
+    padding-top: 1vh;
+    padding-left: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

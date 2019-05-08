@@ -5,6 +5,7 @@ $(document).ready(function() {
     console.log("click");
     let navLinkDisplay = $("#navbar").css("display")
     if (navLinkDisplay === 'none') {
+      //$("#navbar").css("display", "flex");
       $("#navbar").slideDown(1000, 'linear').css("display", "flex");
       // $("#nav-links").animate({display: flex}, 1500);
     } else {
@@ -14,7 +15,7 @@ $(document).ready(function() {
 
   // Word Rotator
   let words = ["GIS Administrator", "Web Developer", "Spatial Analyst", "Lifelong Learner"];
-  let element = $('#header-tagline p span');
+  let element = $('#header-tagline h1.role');
   let currentword = -1;
 
   window.setInterval(function(){
