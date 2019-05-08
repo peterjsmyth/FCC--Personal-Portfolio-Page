@@ -171,7 +171,6 @@ h5 {
 
   #welcome-section {
     height: calc(100vh - 44px);
-    border: 1px red solid;
   }
 
   #header-content {
